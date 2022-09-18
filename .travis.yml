@@ -10,8 +10,8 @@ services:
 before_install:
   - docker build -t rimaig/react-app -f Dockerfile.dev .
 
-script:
-  - docker run rimaig/react-app npm run test --forceExit
+#script:
+ # - docker run rimaig/react-app npm run test --forceExit
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
