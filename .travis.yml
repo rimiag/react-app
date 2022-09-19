@@ -10,15 +10,15 @@ services:
 before_install:
   - docker build -t rimaig/react-app -f Dockerfile.dev .
 
-#script:
- # - docker run rimaig/react-app npm run test --forceExit
+script:
+  - docker run rimaig/react-app npm run test -- --coverage .
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "react-app"
-  env: "Reactapp-env"
+  app: "docker-react"
+  env: "Dockerreact-env"
   bucket_name: "elasticbeanstalk-us-east-1-510645718273"
-  bucket_path: "react-app"
+  bucket_path: "docker-react"
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
