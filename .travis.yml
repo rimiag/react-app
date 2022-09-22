@@ -17,7 +17,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "react-test"
-  env: Reacttest-env"
+  env: "Reacttest-env"
   bucket_name: "elasticbeanstalk-us-east-1-510645718273"
   bucket_path: "react-test"
   on:
